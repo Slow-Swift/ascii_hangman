@@ -81,12 +81,12 @@ def print_word(word: str, used_letters: list[str]):
     print_word = ' '.join((c if c in used_letters or c == ' ' else '_') for c in word)
     print(print_word)
 
-def hangman(word, used_letters, count_wrong):
+def update_display(word, used_letters, count_wrong):
     clear_scr()
     print_stand(count_wrong)
     print_word(word, used_letters)
     
 
 if __name__ == "__main__":
-    hangman('hello world', {'l', 'o', 'z'}, 1)
+    update_display('hello world', {'l', 'o', 'z'}, 1)
     
