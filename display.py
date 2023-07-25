@@ -85,7 +85,7 @@ def print_word(word: str, used_letters: list[str]):
     
 def print_alphabet(used_letters):
     print()
-    print(' '.join(c for c in alphabet if c.upper() not in used_letters))
+    print(' '.join(c for c in alphabet if c.lower() not in used_letters))
     
 def show_win_screen(word):
     clear_scr()
@@ -106,10 +106,4 @@ def update_display(word, used_letters, count_wrong, message=''):
     print_alphabet(used_letters)
     
 if __name__ == "__main__":
-<<<<<<< HEAD
     update_display('hello world', {'l', 'o', 'z'}, 1, 'Welcome')
-    
-=======
-    update_display('hello world', {'l', 'o', 'z'}, 1)
-    
->>>>>>> 7a519ae (add main game loop, include display)
