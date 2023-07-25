@@ -1,3 +1,7 @@
+# CREDITS
+# 2023, 2h total work
+# FINIAN for DISPLAY module
+# JACOBUS for PLAY module
 from display import show_win_screen, show_lose_screen, update_display, stands
 from random import choice
 
