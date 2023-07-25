@@ -1,7 +1,7 @@
 from random import choice
 
 
-WORDS = {
+WORDS = [
     "word",
     "chatgpt",
     "finain",
@@ -44,7 +44,7 @@ WORDS = {
     "c",
     "language",
     "mind",
-}
+]
 
 
 def generate_word():
