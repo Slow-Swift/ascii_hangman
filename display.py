@@ -106,5 +106,10 @@ def update_display(word, used_letters, count_wrong, message=''):
     print_alphabet(used_letters)
     
 if __name__ == "__main__":
+<<<<<<< HEAD
     update_display('hello world', {'l', 'o', 'z'}, 1, 'Welcome')
     
+=======
+    update_display('hello world', {'l', 'o', 'z'}, 1)
+    
+>>>>>>> 7a519ae (add main game loop, include display)
