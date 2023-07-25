@@ -48,34 +48,23 @@ WORDS = [
 ]
 
 
-def generate_word():
-    return choice(WORDS)
-
-
-def solved(word, used_letters):
-    for c in word:
-        if c not in used_letters:
-            return False
-    return True
-
-
 def main():
     used_letters = set()
     mistakes = 0
-    word = generate_word()
+    word = choice(WORDS)
     update_display(word, used_letters, mistakes)
     while True:
         guess = input().lower()[0]
         used_letters.add(guess)
         if guess not in word:
-            update_display(word, used_letters, mistakes, message=f"{guess} is not in the word!")
             mistakes += 1
+            update_display(word, used_letters, mistakes, message=f"{guess} is not in the word!")
         else:
             update_display(word, used_letters, mistakes, message=f"{guess} is a letter in the word!")
         if mistakes >= len(stands):
             show_lose_screen(word)
             break
-        if solved(word, used_letters):
+        if all(char in used_letters for char in word):
             show_win_screen(word)
             break
 
